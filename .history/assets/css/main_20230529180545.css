@@ -13,7 +13,7 @@
 }
 
 .animated-text {
-    animation: fade-in-out 4s normal;
+    animation: fade-in-out 4s infinite;
     }
 
     @keyframes fade-in-out {

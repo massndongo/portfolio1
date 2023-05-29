@@ -12,18 +12,15 @@
     margin-top: 10%;
 }
 
-.animated-text {
-    animation: fade-in-out 4s normal;
-    }
 
-    @keyframes fade-in-out {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+.animated-text {
+    animation: type-out 4s steps(40) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid black;
+  }
+
+  @keyframes type-out {
+    from { width: 0; }
+    to { width: 100%; }
+  }
