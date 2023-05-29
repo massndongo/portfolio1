@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('./') format('truetype');
+  }
+  
+  /* Utilisation de la police */
+  body {
+    font-family: 'Nom de votre police', sans-serif;
+  }
