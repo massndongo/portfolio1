@@ -47,7 +47,7 @@
     margin-top: 5%;
 }
 .profil {
-    /* background-color: #db7e14; */
+    background-color: #db7e14;
     z-index: -2;
 }
 .angular {
@@ -66,11 +66,11 @@
     z-index: -1;
 }
 
-.ionic {
+.symfony {
     
     position: absolute;
-    width: 15%;
-    margin-top: 17%;
+    width: 25%;
+    margin-top: 6%;
     margin-left: 12%;
     z-index: -1;
 }

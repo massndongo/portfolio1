@@ -19,21 +19,3 @@
   }
 
   
-  var backToTopBtn = document.getElementById("back-to-top");
-
-  // Afficher ou masquer le bouton en fonction du défilement de la page
-  window.addEventListener("scroll", function() {
-    if (window.pageYOffset > 100) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  });
-
-  // Faire défiler vers le haut de la page lorsque le bouton est cliqué
-  backToTopBtn.addEventListener("click", function() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });

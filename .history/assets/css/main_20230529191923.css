@@ -47,7 +47,7 @@
     margin-top: 5%;
 }
 .profil {
-    /* background-color: #db7e14; */
+    background-color: #db7e14;
     z-index: -2;
 }
 .angular {
@@ -62,15 +62,6 @@
     position: absolute;
     width: 25%;
     margin-top: 6%;
-    margin-left: 12%;
-    z-index: -1;
-}
-
-.ionic {
-    
-    position: absolute;
-    width: 15%;
-    margin-top: 17%;
-    margin-left: 12%;
+    margin-left: 10%;
     z-index: -1;
 }
