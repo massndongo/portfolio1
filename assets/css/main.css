@@ -3,25 +3,23 @@
     src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
   }
   
-  /* Utilisation de la police */
-  body {
-    font-family: 'Poppins Regular', sans-serif;
-  }
+/* Utilisation de la police */
+body {
+font-family: 'Poppins Regular', sans-serif;
+}
 
-  .nav-link.active {
-    font-weight: bold;
-  }
+.nav-link.active {
+font-weight: bold;
+}
 .contenu {
-    margin-top: 10%;
+margin-top: 10%;
 }
 
 h1{
     font-size: 60px;
 }
 
-
-
-.animated-text {
+/* .animated-text {
     animation: fade-in-out 4s normal;
     }
 
@@ -35,7 +33,7 @@ h1{
     100% {
         opacity: 1;
     }
-}
+} */
 
 
 #back-to-top {
@@ -62,9 +60,31 @@ h1{
     color: white;
 }
 
-.angular {
-    position: absolute;
-    width: 25%;
-    margin-top: 6%;
-    z-index: -1;
+  
+.show-menu {
+    transition: 1s;
+  }
+
+/* Styles spécifiques pour les écrans de moins de 780px */
+@media screen and (max-width: 780px) {
+    .contenu{
+        margin-top: 25%;
+        justify-content: center;
+        text-align: center;
+    }
+    .titre{
+        font-size: 40px;
+    }
+    .profil-text{
+        font-size: 25px;
+    }
+    #downloadButton{
+        z-index: 1000;
+        position: absolute;
+        margin-top: 37%;
+        margin-left: 40%;
+        transform: rotate(90deg);
+        font-size: 18px;
+    }
 }
+

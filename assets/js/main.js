@@ -87,12 +87,18 @@
       var cvUrl = 'cv/CVMassam.pdf'; // Remplacez par le chemin réel de votre CV
       downloadFile(cvUrl);
     });
-    // const navbar = document.querySelector('.navbar');
-    // const toggleButton = document.querySelector('.toggle-button');
-    // const navbarList = document.querySelector('.navbar-list');
+    const toggleButton = document.querySelector('.toggle-button');
+    const ul = document.querySelector('.navbar-nav')
     
-    // toggleButton.addEventListener('click', function() {
-    //   navbar.classList.toggle('show-menu');
-    // });
+    toggleButton.addEventListener('click', function() {
+      navbar.classList.toggle('show-menu');
+      console.log(ul.style.display);
+      if (ul.style.display === 'none') {
+        ul.style.display = 'block';
+      } else {
+        ul.style.display = 'none;'
+      }
+    });
+    
   });
   
