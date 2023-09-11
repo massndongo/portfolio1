@@ -24,6 +24,10 @@ transition: background-color 0.3s, color 0.3s;
 .nav-link.active {
 font-weight: bold;
 }
+nav ul li a:hover{
+    font-size: 18px;
+    transition: .3s;
+}
 .contenu {
 margin-top: 10%;
 }
