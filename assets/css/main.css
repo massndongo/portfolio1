@@ -6,8 +6,18 @@
 /* Utilisation de la police */
 body {
 font-family: 'Poppins Regular', sans-serif;
+transition: background-color 0.3s, color 0.3s;
 }
 
+.dark-mode {
+    background-color: #212529;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #000;
+}
 .nav-link.active {
 font-weight: bold;
 }
