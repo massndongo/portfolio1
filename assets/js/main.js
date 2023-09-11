@@ -96,7 +96,10 @@
 
     const toggleButton = document.getElementById('toggleButton');
     const body = document.body;
-
+    const card = document.querySelectorAll('.card');
+    const iconSkills = document.querySelectorAll('.icons-skills');
+    // const titleSkills = document.querySelectorAll('.title-skills');
+    const liSkills = document.querySelectorAll('.li-skills');
     imageModeSombre.style.display = 'none';
     toggleButton.addEventListener('click', () => {
       if (body.classList.contains('dark-mode')) {
@@ -117,6 +120,21 @@
           document.querySelectorAll('.nav-link').forEach(function(link) {
             link.style.color = '';
           });
+          card.forEach(function (bgCard) {
+            bgCard.classList.remove('bg-dark');
+            bgCard.classList.add('bg-light');
+          });
+          iconSkills.forEach(function (iconSkill) {
+            iconSkill.classList.add('btn-dark');
+            iconSkill.classList.remove('btn-light');
+          });
+          liSkills.forEach(function (liSkill) {
+            liSkill.classList.add('bg-dark');
+            liSkill.classList.remove('bg-light');
+            liSkill.classList.add('text-bg-dark');
+            liSkill.classList.remove('text-bg-light');
+          });
+
       } else {
           body.classList.remove('light-mode');
           body.classList.add('dark-mode');
@@ -135,7 +153,20 @@
           document.querySelectorAll('.nav-link').forEach(function(link) {
             link.style.color = 'white';
           });
-
+          card.forEach(function (bgCard) {
+            bgCard.classList.add('bg-dark');
+            bgCard.classList.remove('bg-light');
+          });
+          iconSkills.forEach(function (iconSkill) {
+            iconSkill.classList.remove('btn-dark');
+            iconSkill.classList.add('btn-light');
+          });
+          liSkills.forEach(function (liSkill) {
+            liSkill.classList.remove('bg-dark');
+            liSkill.classList.add('bg-light');
+            liSkill.classList.remove('text-bg-dark');
+            liSkill.classList.add('text-bg-light');
+          });
       } 
     });
     
