@@ -56,8 +56,6 @@ h1{
 #back-to-top {
     display: none;
     position: fixed;
-    background-color: black;
-    color: white;
     bottom: 20px;
     right: 20px;
     width: 40px;
@@ -68,21 +66,92 @@ h1{
     cursor: pointer;
   }
 
-  .card:hover{
+.backToTopSombre{
+    background-color: black;
+    color: white;
+}
+.backToTop{
+    background-color: white;
+    color: #000;
+}
+
+#accueil, #propos, #skills, #projets{
+    min-height: 100vh;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 6rem;
+}
+ .heading{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+ }
+.heading span{
+    color: #212529;
+}
+.about-img{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid #212529;
+     
+}
+
+.about-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem solid transparent;
+    border-left: .2rem solid #212529;
+    border-right: .2rem solid #212529;
+}
+
+.about-content{
+    text-align: center;
+}
+
+.about-content h3{
+    font-size: 60px;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+
+.card:hover{
     cursor: pointer;
     box-shadow: 10px 10px  rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
     transition: .3s;
-    /* background-color: black;  */
-    /* color: white; */
+
 }
 ul, li{
     background-color: transparent;
 }
-  
+
 .show-menu {
     transition: 1s;
-  }
+}
 
 /* Styles spécifiques pour les écrans de moins de 780px */
 @media screen and (max-width: 780px) {
@@ -98,12 +167,39 @@ ul, li{
         font-size: 25px;
     }
     #downloadButton{
-        z-index: 1000;
+        z-index: 100;
         position: absolute;
-        margin-top: 37%;
+        margin-top: 30%;
         margin-left: 40%;
         transform: rotate(90deg);
         font-size: 18px;
+    }
+    .menu{
+        background-color: white;
+    }
+
+    .mobile{
+        display: none;
+    }
+    .nav-item{
+        width: 90%;
+        margin-left: 4%;
+    }
+    #toggleButton{
+        margin: 3% 3% 3% 0;
+    }
+    .animated-text h1, h3{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #accueil, #propos, #skills, #projets{
+        min-height: auto;
+        margin-top: 15%;
+    }
+    #back-to-top{
+        z-index: 1000;
     }
 }
 

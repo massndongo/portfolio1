@@ -4,6 +4,8 @@
 
 
   document.addEventListener('DOMContentLoaded', function() {
+    var menu = document.querySelector('.menu');
+    var btnToggleMenu = document.querySelector('.navbar-toggler');
     var navLinks = document.querySelectorAll('.nav-link');
     var downloadButton = document.getElementById('downloadButton');
     var navbar = document.querySelector('.navbar');
@@ -13,7 +15,9 @@
     const imageModeSombre = document.getElementById('logoSombre');
     const startchange = document.querySelector('#startchange');
     const offset = startchange.getBoundingClientRect().top;
-  
+    btnToggleMenu.addEventListener("click", function () {
+      menu.classList.toggle("mobile");
+    });
     document.addEventListener('scroll', function() {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       
@@ -101,6 +105,8 @@
     // const titleSkills = document.querySelectorAll('.title-skills');
     const liSkills = document.querySelectorAll('.li-skills');
     imageModeSombre.style.display = 'none';
+    backToTopBtn.classList.add('backToTopSombre');
+
     toggleButton.addEventListener('click', () => {
       if (body.classList.contains('dark-mode')) {
           body.classList.remove('dark-mode');
@@ -113,6 +119,9 @@
           btnMode.classList.remove('btn-outline-light');
           imageModeClair.style.display = 'block';
           imageModeSombre.style.display = 'none';
+          backToTopBtn.classList.remove('backToTop');
+          backToTopBtn.classList.add('backToTopSombre');
+          
           document.querySelectorAll('.link-icons-rs').forEach(function (bgIcons) {
             bgIcons.classList.add('link-dark');
             bgIcons.classList.remove('link-light');
@@ -123,6 +132,8 @@
           card.forEach(function (bgCard) {
             bgCard.classList.remove('bg-dark');
             bgCard.classList.add('bg-light');
+            bgCard.classList.remove('border');
+            bgCard.classList.remove('border-light');
           });
           iconSkills.forEach(function (iconSkill) {
             iconSkill.classList.add('btn-dark');
@@ -146,6 +157,9 @@
           btnMode.classList.remove('btn-outline-dark');
           imageModeClair.style.display = 'none';
           imageModeSombre.style.display = 'block';
+          backToTopBtn.classList.add('backToTop');
+          menu.style.backgroundColor = "transparent";
+          btnToggleMenu.classList.add('bg-light');
           document.querySelectorAll('.link-icons-rs').forEach(function (bgIcons) {
             bgIcons.classList.remove('link-dark');
             bgIcons.classList.add('link-light');
@@ -155,6 +169,8 @@
           });
           card.forEach(function (bgCard) {
             bgCard.classList.add('bg-dark');
+            bgCard.classList.add('border');
+            bgCard.classList.add('border-light');
             bgCard.classList.remove('bg-light');
           });
           iconSkills.forEach(function (iconSkill) {
