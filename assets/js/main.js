@@ -106,6 +106,8 @@
     // const titleSkills = document.querySelectorAll('.title-skills');
     const liSkills = document.querySelectorAll('.li-skills');
     var animatedText = document.querySelector('.animated-text');
+    var img = document.querySelector('.aboutImg');
+    var circleSpin = document.querySelector('.circle-spin');
     imageModeSombre.style.display = 'none';
     backToTopBtn.classList.add('backToTopSombre');
 
@@ -127,6 +129,10 @@
           backToTopBtn.classList.add('backToTopSombre');
           animatedText.classList.add('animated-text');
           animatedText.classList.remove('animated-text-mode-sombre');
+          img.classList.add('aboutImg');
+          img.classList.remove('img-border-light');
+          circleSpin.classList.add('circle-spin');
+          circleSpin.classList.remove('circle-spin-dark');
           document.querySelectorAll('.link-icons-rs').forEach(function (bgIcons) {
             bgIcons.classList.add('link-dark');
             bgIcons.classList.remove('link-light');
@@ -167,9 +173,13 @@
           btnToggleMenu.classList.add('bg-light');
           animatedText.classList.remove('animated-text');
           animatedText.classList.add('animated-text-mode-sombre');
+          circleSpin.classList.remove('circle-spin');
+          circleSpin.classList.add('circle-spin-dark');
           document.querySelectorAll('.link-icons-rs').forEach(function (bgIcons) {
             bgIcons.classList.remove('link-dark');
             bgIcons.classList.add('link-light');
+            img.classList.remove('aboutImg');
+            img.classList.add('img-border-light');
           });
           document.querySelectorAll('.nav-link').forEach(function(link) {
             link.style.color = 'white';
