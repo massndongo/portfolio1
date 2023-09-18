@@ -36,6 +36,7 @@
         // document.querySelector('#propos').style.marginTop = '30%';
         navLinks.forEach(function(link) {
           link.classList.remove('active');
+          menu.classList.toggle("mobile");
         });
         link.classList.add('active');
         });
@@ -108,6 +109,7 @@
     backToTopBtn.classList.add('backToTopSombre');
 
     toggleButton.addEventListener('click', () => {
+      menu.classList.toggle("mobile");
       if (body.classList.contains('dark-mode')) {
           body.classList.remove('dark-mode');
           body.classList.add('light-mode');

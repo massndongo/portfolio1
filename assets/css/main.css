@@ -155,6 +155,9 @@ ul, li{
 
 /* Styles spécifiques pour les écrans de moins de 780px */
 @media screen and (max-width: 780px) {
+    nav{
+        box-shadow: 0 0 10px 10px  rgba(0, 0, 0, 0.2); ;
+    }
     .contenu{
         margin-top: 25%;
         justify-content: center;
@@ -194,7 +197,12 @@ ul, li{
         align-items: center;
         text-align: center;
     }
-    #accueil, #propos, #skills, #projets{
+    #accueil{
+        min-height: auto;
+        margin-top:40%;
+
+    }
+    #propos, #skills, #projets, #contact, footer{
         min-height: auto;
         margin-top: 15%;
     }
