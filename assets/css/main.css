@@ -152,7 +152,28 @@ ul, li{
 .show-menu {
     transition: 1s;
 }
+.animated-text h3{
+    color: transparent;
+    -webkit-text-stroke: .7px #212529;
+    background-image: linear-gradient(#212529, #212529);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
 
+}
+.animated-text-mode-sombre h3{
+    color: transparent;
+    -webkit-text-stroke: .7px #fff;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+
+}
 /* Styles spécifiques pour les écrans de moins de 780px */
 @media screen and (max-width: 780px) {
     nav{
@@ -165,6 +186,9 @@ ul, li{
     }
     .titre{
         font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .profil-text{
         font-size: 25px;
@@ -208,6 +232,21 @@ ul, li{
     }
     #back-to-top{
         z-index: 1000;
+    }
+}
+
+
+
+@keyframes homeBgText {
+    0%,
+    10%,
+    100% {
+        background-position: -43rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
     }
 }
 

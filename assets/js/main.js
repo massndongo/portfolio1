@@ -105,9 +105,11 @@
     const iconSkills = document.querySelectorAll('.icons-skills');
     // const titleSkills = document.querySelectorAll('.title-skills');
     const liSkills = document.querySelectorAll('.li-skills');
+    var animatedText = document.querySelector('.animated-text');
     imageModeSombre.style.display = 'none';
     backToTopBtn.classList.add('backToTopSombre');
 
+    animatedText.classList.add('animated-text');
     toggleButton.addEventListener('click', () => {
       menu.classList.toggle("mobile");
       if (body.classList.contains('dark-mode')) {
@@ -123,7 +125,8 @@
           imageModeSombre.style.display = 'none';
           backToTopBtn.classList.remove('backToTop');
           backToTopBtn.classList.add('backToTopSombre');
-          
+          animatedText.classList.add('animated-text');
+          animatedText.classList.remove('animated-text-mode-sombre');
           document.querySelectorAll('.link-icons-rs').forEach(function (bgIcons) {
             bgIcons.classList.add('link-dark');
             bgIcons.classList.remove('link-light');
@@ -162,6 +165,8 @@
           backToTopBtn.classList.add('backToTop');
           menu.style.backgroundColor = "transparent";
           btnToggleMenu.classList.add('bg-light');
+          animatedText.classList.remove('animated-text');
+          animatedText.classList.add('animated-text-mode-sombre');
           document.querySelectorAll('.link-icons-rs').forEach(function (bgIcons) {
             bgIcons.classList.remove('link-dark');
             bgIcons.classList.add('link-light');
