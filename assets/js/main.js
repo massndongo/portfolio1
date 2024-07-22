@@ -20,7 +20,6 @@
     });
     document.addEventListener('scroll', function() {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      
       if (scrollY > offset) {
         navbar.style.backgroundColor = 'white';
       } else {
